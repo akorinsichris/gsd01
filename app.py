@@ -19,7 +19,7 @@ st.set_page_config(page_title=page_title, layout=layout)
 st.title(page_title)
 
 st.sidebar.header("Time Period")
-col1,col2 = st.sidebar.columns(3)
+col1,col2 = st.sidebar.columns(2)
 col1.selectbox("Year", years, key="year")
 col2.selectbot("Month", months, key="month")
   
