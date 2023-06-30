@@ -1,5 +1,7 @@
 import streamlit as st
+import pandas as pd
 
+df = pd.read_csv("https://raw.githubusercontent.com/akorinsichris/gsd01/main/employe.csv")
 
 st.title("GSD Dashboard")
 
