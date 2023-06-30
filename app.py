@@ -21,7 +21,7 @@ st.title(page_title)
 st.sidebar.header("Time Period")
 col1,col2 = st.sidebar.columns(2)
 col1.selectbox("Year", years, key="year")
-col2.selectbot("Month", months, key="month")
+col2.selectbox("Month", months, key="month")
   
 st.sidebar.write("Year")
 st.sidebar.write("Quarter")
