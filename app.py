@@ -22,6 +22,7 @@ st.set_page_config(page_title=page_title, layout=layout)
 st.title(page_title)
 
 df = load_data()
+df.filter(['firstname','lastname','department','accountid'])
 st.write(df)
 
 st.sidebar.header("Time Period")
