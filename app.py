@@ -29,7 +29,15 @@ st.sidebar.header("Time Period")
 col1,col2 = st.sidebar.columns(2)
 col1.selectbox("Year", years, key="year")
 col2.selectbox("Month", months, key="month")
-  
+
+st.sidebar.header("Filter By:")
+
+role=st.sidebar.multiselect("Filter By Role:",
+                            options=df["ROLE"].unique(),
+                            default=df.["ROLE"].unique())
+
+selection_query=df.query("ROLE==@role")
+
 st.sidebar.write("Year")
 st.sidebar.write("Quarter")
 st.sidebar.write("Month")
