@@ -32,11 +32,13 @@ col2.selectbox("Month", months, key="month")
 
 st.sidebar.header("Filter By:")
 
-role=st.sidebar.multiselect("Filter By Role:",
-                            options=df["ROLE"].unique(),
-                            default=df.["ROLE"].unique())
+roles=st.sidebar.multiselect("Filter By Role:",
+                            options=df["role"].unique(),
+                            default=df.["role"].unique())
 
-selection_query=df.query("ROLE==@role")
+selection_query=df.query("role==@roles")
+
+st.df.(selection_query)
 
 st.sidebar.write("Year")
 st.sidebar.write("Quarter")
