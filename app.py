@@ -34,7 +34,7 @@ st.sidebar.header("Filter By:")
 
 roles=st.sidebar.multiselect("Filter By Role:",
                             options=df["role"].unique(),
-                            default=df.["role"].unique())
+                            default=df["role"].unique())
 
 selection_query=df.query("role==@roles")
 
