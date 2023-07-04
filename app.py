@@ -38,7 +38,7 @@ roles=st.sidebar.multiselect("Filter By Role:",
 
 selection_query=df.query("role==@roles")
 
-st.df.(selection_query)
+st.df(selection_query)
 
 st.sidebar.write("Year")
 st.sidebar.write("Quarter")
